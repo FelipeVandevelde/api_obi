@@ -23,6 +23,10 @@ async function fazerScraping() {
   for (let i = 0; i < meses.length; i++) {
     let eventos = $(meses[i]).children('div.cal-month-grid').children('div.cal-day.dark-green-bkgd');
 
+    eventos = eventos.add($(meses[i]).children('div.cal-month-grid').children('div.cal-day.light-blue-bkgd')); // Adiciona eventos com fundo claro, se necessário
+    
+    eventos = eventos.add($(meses[i]).children('div.cal-month-grid').children('div.cal-day.black-bkgd')); // Adiciona eventos com fundo claro, se necessário
+
     if (eventos.length === 0) continue;
     let Auxresponse = [];
     for (let j = 0; j < eventos.length; j++) {
