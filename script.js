@@ -32,11 +32,15 @@ async function fazerScraping() {
     for (let j = 0; j < eventos.length; j++) {
       let dia = $(eventos[j]).clone().children().remove().end().text().trim().padStart(2, '0');
       let mes = (i+1).toString().padStart(2, '0');
-      let descricao = $(eventos[j]).children('span').text().trim().replace('Modalidade Programação: ', '');
-      Auxresponse.push({
-        dia: dia,
-        mes: mes,
-        descricao: descricao
+
+      let descricoes = $(eventos[j]).children('span').html().split(/<br\s*\/?>/i).map(texto => texto.trim());
+
+      descricoes.forEach(descricao => {
+        Auxresponse.push({
+          dia: dia,
+          mes: mes,
+          descricao: descricao
+        });
       });
     }
     response['eventos'] = response['eventos'] ? response['eventos'].concat(Auxresponse) : Auxresponse;
