@@ -1,0 +1,50 @@
+{
+  "ano": "2025",
+  "eventos": [
+    {
+      "dia": "09",
+      "mes": "06",
+      "descricao": "Último dia para cadastro de escolas que participam da Modalidade Programação"
+    },
+    {
+      "dia": "10",
+      "mes": "06",
+      "descricao": "Último dia para inscrição de competidores da Modalidade Programação"
+    },
+    {
+      "dia": "12",
+      "mes": "06",
+      "descricao": "Prova da Fase 1"
+    },
+    {
+      "dia": "13",
+      "mes": "06",
+      "descricao": "Prova da Fase 1"
+    },
+    {
+      "dia": "14",
+      "mes": "06",
+      "descricao": "Prova da Fase 1"
+    },
+    {
+      "dia": "18",
+      "mes": "06",
+      "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 1 disponibilizados no site"
+    },
+    {
+      "dia": "18",
+      "mes": "08",
+      "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 2 disponibilizados no site"
+    },
+    {
+      "dia": "27",
+      "mes": "09",
+      "descricao": "Prova da Fase 3"
+    },
+    {
+      "dia": "02",
+      "mes": "10",
+      "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 3 disponibilizados no site"
+    }
+  ]
+}
