@@ -6,49 +6,74 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const outFile = path.join(__dirname, "request.json");
+const CALENDAR_URL = "https://olimpiada.ic.unicamp.br/calendario/";
+const OUTPUT_FILE = path.join(__dirname, "request.json");
+const BACKGROUND_CLASSES = ["dark-green-bkgd", "light-blue-bkgd", "black-bkgd"];
 
 async function fazerScraping() {
-  const resposta = await fetch('https://olimpiada.ic.unicamp.br/calendario/');
+  const resposta = await fetch(CALENDAR_URL);
   const html = await resposta.text();
-
   const $ = cheerio.load(html);
 
-  let response = {};
+  const ano = extrairAno($);
+  const eventos = extrairEventosPorMes($);
 
-  const ano = $('h2').first().text().trim().split(' ')[1];
-  response.ano = ano;
-  const meses = $('div.cal-month');
+  return { ano, eventos };
+}
 
-  for (let i = 0; i < meses.length; i++) {
-    let eventos = $(meses[i]).children('div.cal-month-grid').children('div.cal-day.dark-green-bkgd');
+function extrairAno($) {
+  const textoTitulo = $("h2").first().text();
+  const matchAno = textoTitulo.match(/\b(\d{4})\b/);
+  return matchAno ? matchAno[1] : "";
+}
 
-    eventos = eventos.add($(meses[i]).children('div.cal-month-grid').children('div.cal-day.light-blue-bkgd')); // Adiciona eventos com fundo claro, se necessário
-    
-    eventos = eventos.add($(meses[i]).children('div.cal-month-grid').children('div.cal-day.black-bkgd')); // Adiciona eventos com fundo claro, se necessário
+function extrairEventosPorMes($) {
+  const meses = $("div.cal-month");
+  const eventos = [];
 
-    if (eventos.length === 0) continue;
-    let Auxresponse = [];
-    for (let j = 0; j < eventos.length; j++) {
-      let dia = $(eventos[j]).clone().children().remove().end().text().trim().padStart(2, '0');
-      let mes = (i+1).toString().padStart(2, '0');
+  meses.each((indiceMes, mesElement) => {
+    const grid = $(mesElement).children("div.cal-month-grid");
+    let eventosDoMes = $();
 
-      let descricoes = $(eventos[j]).children('span').html().split(/<br\s*\/?>/i).map(texto => texto.trim()).filter(Boolean);;
+    BACKGROUND_CLASSES.forEach((classe) => {
+      eventosDoMes = eventosDoMes.add(grid.children(`div.cal-day.${classe}`));
+    });
 
-      descricoes.forEach(descricao => {
-        Auxresponse.push({
-          dia: dia,
-          mes: mes,
-          descricao: descricao
+    if (!eventosDoMes.length) {
+      return;
+    }
+
+    const mesNumero = String(indiceMes + 1).padStart(2, "0");
+
+    eventosDoMes.each((_, eventoElement) => {
+      const dia = $(eventoElement)
+        .clone()
+        .children()
+        .remove()
+        .end()
+        .text()
+        .trim()
+        .padStart(2, "0");
+
+      const descricoesHtml = $(eventoElement).children("span").html() ?? "";
+      const descricoes = descricoesHtml
+        .split(/<br\s*\/?>/i)
+        .map((texto) => texto.trim())
+        .filter(Boolean);
+
+      descricoes.forEach((descricao) => {
+        eventos.push({
+          dia,
+          mes: mesNumero,
+          descricao,
         });
       });
-    }
-    response['eventos'] = response['eventos'] ? response['eventos'].concat(Auxresponse) : Auxresponse;
-  }
-  return response;
+    });
+  });
+
+  return eventos;
 }
+
 const data = await fazerScraping();
 
-fs.writeFileSync(outFile, JSON.stringify(data, null, 2) + "\n", "utf8");
-
-console.log(`Wrote ${outFile}`);
+fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2) + "\n", "utf8");
