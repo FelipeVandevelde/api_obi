@@ -2,6 +2,16 @@
   "ano": "2025",
   "eventos": [
     {
+      "dia": "06",
+      "mes": "03",
+      "descricao": "Evento Geral: Abertura das inscrições"
+    },
+    {
+      "dia": "06",
+      "mes": "06",
+      "descricao": "Modalidade Iniciação: Prova da Fase 1Modalidade Iniciação: Último dia para inscrição de competidores da Modalidade Iniciação"
+    },
+    {
       "dia": "09",
       "mes": "06",
       "descricao": "Último dia para cadastro de escolas que participam da Modalidade Programação"
@@ -32,9 +42,49 @@
       "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 1 disponibilizados no site"
     },
     {
+      "dia": "25",
+      "mes": "06",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 1"
+    },
+    {
+      "dia": "28",
+      "mes": "06",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 1"
+    },
+    {
+      "dia": "01",
+      "mes": "07",
+      "descricao": "Evento Geral: Resultado final da fase 1"
+    },
+    {
+      "dia": "14",
+      "mes": "08",
+      "descricao": "Prova da Fase 2Modalidade Iniciação: Cadernos de Tarefas das provas e gabaritos da Fase 2 disponibilizados no site"
+    },
+    {
+      "dia": "15",
+      "mes": "08",
+      "descricao": "Prova da Fase 2Modalidade Iniciação: Último dia para envio das Folhas de Respostas da Fase 2 por parte dos Coordenadores Locais"
+    },
+    {
       "dia": "18",
       "mes": "08",
       "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 2 disponibilizados no site"
+    },
+    {
+      "dia": "21",
+      "mes": "08",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 2"
+    },
+    {
+      "dia": "25",
+      "mes": "08",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 2"
+    },
+    {
+      "dia": "28",
+      "mes": "08",
+      "descricao": "Evento Geral: Resultado final da Fase 2"
     },
     {
       "dia": "27",
@@ -45,6 +95,21 @@
       "dia": "02",
       "mes": "10",
       "descricao": "Cadernos de Tarefas das provas e gabaritos da Fase 3 disponibilizados no site"
+    },
+    {
+      "dia": "07",
+      "mes": "10",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 3"
+    },
+    {
+      "dia": "10",
+      "mes": "10",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 3"
+    },
+    {
+      "dia": "15",
+      "mes": "10",
+      "descricao": "Evento Geral: Resultado Final da OBI2025 e Quadro de Medalhas"
     }
   ]
 }
