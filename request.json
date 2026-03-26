@@ -1,4 +1,120 @@
 {
-  "ano": "",
-  "eventos": []
+  "ano": "2026",
+  "eventos": [
+    {
+      "dia": "06",
+      "mes": "03",
+      "descricao": "Evento Geral: Abertura das inscrições"
+    },
+    {
+      "dia": "26",
+      "mes": "05",
+      "descricao": "Modalidade Iniciação: Último dia para inscrição de competidores da <b>Modalidade Iniciação</b>"
+    },
+    {
+      "dia": "26",
+      "mes": "05",
+      "descricao": "Modalidade Iniciação: Cadernos de Tarefas das provas da Fase 1 disponibilizados para Coordenadores"
+    },
+    {
+      "dia": "06",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Último dia para cadastro de escolas que participam da Modalidade Programação"
+    },
+    {
+      "dia": "08",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Último dia para inscrição de competidores da <b>Modalidade Programação</b>"
+    },
+    {
+      "dia": "10",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Prova da Fase 1"
+    },
+    {
+      "dia": "11",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Prova da Fase 1"
+    },
+    {
+      "dia": "12",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Prova da Fase 1"
+    },
+    {
+      "dia": "17",
+      "mes": "06",
+      "descricao": "Modalidade Programação: Cadernos de Tarefas das provas e gabaritos da Fase 1 disponibilizados no site"
+    },
+    {
+      "dia": "22",
+      "mes": "06",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 1"
+    },
+    {
+      "dia": "24",
+      "mes": "06",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 1"
+    },
+    {
+      "dia": "26",
+      "mes": "06",
+      "descricao": "Evento Geral: Resultado final da fase 1"
+    },
+    {
+      "dia": "20",
+      "mes": "08",
+      "descricao": "Modalidade Programação: Prova da Fase 2"
+    },
+    {
+      "dia": "21",
+      "mes": "08",
+      "descricao": "Modalidade Programação: Prova da Fase 2"
+    },
+    {
+      "dia": "25",
+      "mes": "08",
+      "descricao": "Modalidade Programação: Cadernos de Tarefas das provas e gabaritos da Fase 2 disponibilizados no site"
+    },
+    {
+      "dia": "31",
+      "mes": "08",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 2"
+    },
+    {
+      "dia": "02",
+      "mes": "09",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 2"
+    },
+    {
+      "dia": "04",
+      "mes": "09",
+      "descricao": "Evento Geral: Resultado final da Fase 2"
+    },
+    {
+      "dia": "03",
+      "mes": "10",
+      "descricao": "Modalidade Programação: Prova da Fase 3"
+    },
+    {
+      "dia": "07",
+      "mes": "10",
+      "descricao": "Evento Geral: Cadernos de Tarefas das provas e gabaritos da Fase 3 disponibilizados no site"
+    },
+    {
+      "dia": "13",
+      "mes": "10",
+      "descricao": "Evento Geral: Resultado preliminar da Fase 3"
+    },
+    {
+      "dia": "16",
+      "mes": "10",
+      "descricao": "Evento Geral: Último dia para solicitação de recorreção da Fase 3"
+    },
+    {
+      "dia": "22",
+      "mes": "10",
+      "descricao": "Evento Geral: Resultado Final da OBI2026 e Quadro de Medalhas"
+    }
+  ]
 }
